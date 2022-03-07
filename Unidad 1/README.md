@@ -1,3 +1,3 @@
 # Acosta 
 
-Te amo chaparrita pikuda <3
+Hi I'm a bear.
