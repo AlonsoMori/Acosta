@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 10% 80% 10%;
+    
+    grid-template-areas: 'encabezado encabezado encabezado''ContenidoI ContenidoII ContenidoIII' 
+    'piepagina piepagina piepagina';
+}
+
+*caja{
+    background-color: grey;
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+#encabezado {grid-area: encabezado; background-color: white;}
+#ContenidoI {grid-area: ContenidoI; background-color: grey;}
+#ContenidoII {grid-area: ContenidoII; background-color: gold;}
+#ContenidoIII {grid-area: ContenidoIII; background-color: grey;}
+#piepagina {grid-area: piepagina; background-color: white;}
