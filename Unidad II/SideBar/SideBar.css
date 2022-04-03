@@ -6,12 +6,24 @@
     font-family: "Raleway";
 }
 
+
+
+   
+
+
+.contenero{
+    display: flex;
+    flex-direction: column;
+}
+
 .sidebar{
     position: fixed;
     left: 0;
     width: 230px;
     height: 100%;
     background: black;
+    justify-content: space;
+    flex-direction: column;
 }
 
 .titulo{
@@ -19,13 +31,16 @@
     color: white;
     line-height: 60px;
     background-color: red;
+    display: flex;
 }
 
 .sidebar ul li a{
-    display: block;
+  
     color: white;
     line-height: 60px;
     padding-left: 49px;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar ul li a:hover{
@@ -33,6 +48,8 @@
     transition: .5s;
     background: black;
     counter-reset: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .main{

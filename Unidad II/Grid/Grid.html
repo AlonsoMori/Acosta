@@ -8,12 +8,36 @@
         <title>Document</title>
     </head>
     <body>
-        <div class="contenedor">
+        <div id="idcontene" class="contenedor">
             <div id="caja1" class="caja">caja 1</div>
             <div id="caja2" class="caja">caja 2</div>
             <div id="caja3" class="caja">caja 3</div>
             <div id="caja4" class="caja">caja 4</div>
             <div id="caja5" class="caja">caja 5</div>
+            <div id="caja6" class="caja">caja 6</div>
+            <div id="caja7" class="caja">caja 7</div>
+            <div id="caja8" class="caja">caja 8</div>
+            <div id="caja9" class="caja">caja 9</div>
         </div>
+         <script>
+
+             window.onload = function(){
+
+                var elem = document.getElementById("idcontene");
+                elem.addEventListener("click",function(evento){
+                    console.log(evento.target.id);
+
+                    if(document.getElementById(evento.target.id).classList.contains("caja")){
+                        document.getElementById(evento.target.id).classList.toggle("cajaAmarilla");
+                    }
+                });
+            
+             
+                 
+              
+            }
+        
+        
+         </script>
     </body>
 </html>
