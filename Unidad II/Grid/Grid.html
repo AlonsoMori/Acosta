@@ -20,24 +20,15 @@
             <div id="caja9" class="caja">caja 9</div>
         </div>
          <script>
-
              window.onload = function(){
-
                 var elem = document.getElementById("idcontene");
                 elem.addEventListener("click",function(evento){
                     console.log(evento.target.id);
-
                     if(document.getElementById(evento.target.id).classList.contains("caja")){
                         document.getElementById(evento.target.id).classList.toggle("cajaAmarilla");
                     }
-                });
-            
-             
-                 
-              
+                }); 
             }
-        
-        
          </script>
     </body>
 </html>

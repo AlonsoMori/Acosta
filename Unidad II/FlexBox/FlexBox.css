@@ -1,11 +1,8 @@
-
-Contenedor: Es el elemento padre que tendrá en su interior cada uno de los ítems flexibles. Observa que al contrario que muchas otras estructuras CSS, por norma general, en Flex establecemos las propiedades al elemento padre.
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 .contenedorflex{
     width: 100vw;
     height: 100vw;
@@ -16,7 +13,6 @@ Contenedor: Es el elemento padre que tendrá en su interior cada uno de los íte
     justify-content: center;
     align-items: flex-start;
 }
-
 .cajaflex{
     background-color: bisque;
     width: 100px;
