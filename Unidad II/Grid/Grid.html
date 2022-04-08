@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Grid.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <title>Document</title>
     </head>
     <body>
@@ -19,16 +20,7 @@
             <div id="caja8" class="caja">caja 8</div>
             <div id="caja9" class="caja">caja 9</div>
         </div>
-         <script>
-             window.onload = function(){
-                var elem = document.getElementById("idcontene");
-                elem.addEventListener("click",function(evento){
-                    console.log(evento.target.id);
-                    if(document.getElementById(evento.target.id).classList.contains("caja")){
-                        document.getElementById(evento.target.id).classList.toggle("cajaAmarilla");
-                    }
-                }); 
-            }
-         </script>
+ 
+        <script src="Grid.js"></script>
     </body>
 </html>
