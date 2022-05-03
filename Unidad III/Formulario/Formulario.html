@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ejemplo Boostrap</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    </head>
+    <body> 
+
+        <div class="container">
+            
+            <form class="form">
+
+                <div class="row">
+
+                    <div class="form-group col-sm-12 col-md-4 col-lg-2">
+
+                        <label for="idCliente" class="control-label">Numero De Empleado</label>
+                        <input id="idCliente" type="text" class="form-control" placeholder="0000"/>
+
+                    </div>
+
+                    <div class="form-group col-sm-12 col-nd-8 col-lg-10">
+
+                        <label for="idCliente" class="control-label">Nombre</label>
+                        <input id="idCliente" type="text" class="form-control" placeholder="Nombre Completo"/>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group col-sm-12 col-md-8 col-lg-6">
+
+                        <label for="idCliente" class="control-label">Turno</label>
+                        <input id="idCliente" type="text" class="form-control" placeholder="Matutino"/>
+
+                    </div>
+
+                    <div class="form-group col-sm-12 col-nd-4 col-lg-6">
+
+                        <label for="idCliente" class="control-label">Horas trabajadas</label>
+                        <input id="idCliente" type="text" class="form-control" placeholder="1, 2, 3, 4, etc."/>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group col-sm-12 col-md-6 col-lg-4">
+
+                        <label for="idCliente" class="control-label">Empresa</label>
+                        <input id="idCliente" type="text" class="form-control" placeholder="Cinepolis"/>
+
+                    </div>
+
+                    <div class="form-group col-sm-12 col-nd-6 col-lg-4">
+
+                        <label for="idCliente" class="control-label">Area</label>
+                        <input id="idCliente" type="text" class="form-control" placeholder="Proyeccion"/>
+
+                    </div>
+
+                    <div class="form-group col-sm-12 col-nd-12 col-lg-4">
+
+                        <label for="idCliente" class="control-label">Sucursal</label>
+                        <input id="idCliente" type="text" class="form-control" placeholder="Paseo Reforma"/>
+
+                    </div>
+                </div>
+
+                <button id="Boton" type="button" class="btn btn-primary">Primary</button>
+                <div id="Modal1" class="modal" tabindex="-1" role="dialog">
+
+                    <div class="modal-dialog" role="document">
+
+                      <div class="modal-content">
+
+                        <div class="modal-header">
+
+                          <h5 class="modal-title">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                            <span aria-hidden="true">&times;</span>
+
+                          </button>
+
+                        </div>
+
+                        <div class="modal-body">
+
+                          <p>¡Has sido registrado con exito!</p>
+
+                        </div>
+
+                        <div class="modal-footer">
+
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+                  
+                </div>
+                
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+
+                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+                      <span aria-hidden="true">&times;</span>
+
+                    </button>
+
+                  </div>
+
+
+                
+
+            </form>
+        </div>
+
+        <script>
+
+            $("#Boton").click(function(){
+                $("#Modal1").modal()
+            });
+
+            const btnSwitch = document.querySelector('#switch');
+
+btnSwitch.addEventListener('click', () => {
+	document.body.classList.toggle('dark');
+	btnSwitch.classList.toggle('active');
+});
+
+            $("#Boton2").click(function(){
+
+
+                Swal.fire('Any fool can use a computer')
+
+            })
+         
+
+        </script>
+    </body>
+
+</html>
