@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Ejemplo Boostrap</title>
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
         <link rel="stylesheet">
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/sweetalert2@11">
-    
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="Ajax.js"></script>
 
     </head>
+
     <body> 
+
+        <div id="MyDiv"><h2>Tienda De Armas</h2></div>
 
         <div class="container">
             
@@ -25,17 +30,17 @@
 
                 <div class="row">
 
-                    <div class="form-group col-sm-12 col-md-4 col-lg-2">
+                    <div class="form-group col-sm-8 col-md-4 col-lg-2">
 
-                        <label for="idCliente" class="control-label">Numero De Empleado</label>
+                        <label for="idCliente" class="control-label">Numero De Serie: </label>
                         <input id="idCliente" type="text" class="form-control" placeholder="0000"/>
 
                     </div>
 
-                    <div class="form-group col-sm-12 col-nd-8 col-lg-10">
+                    <div class="form-group col-sm-12 col-nd-8 col-lg-6">
 
-                        <label for="idCliente" class="control-label">Nombre</label>
-                        <input id="idCliente" type="text" class="form-control" placeholder="Nombre Completo"/>
+                        <label for="idCliente" class="control-label">Nombre Del Producto: </label>
+                        <input id="idCliente" type="text" class="form-control" placeholder="FN P90."/>
 
                     </div>
 
@@ -43,17 +48,24 @@
 
                 <div class="row">
 
-                    <div class="form-group col-sm-12 col-md-8 col-lg-6">
+                    <div class="form-group col-sm-12 col-md-8 col-lg-4">
 
-                        <label for="idCliente" class="control-label">Turno</label>
-                        <input id="idCliente" type="text" class="form-control" placeholder="Matutino"/>
+                        <label for="idCliente" class="control-label">Fabricante: </label>
+                        <input id="idCliente" type="text" class="form-control" placeholder="FN Herstal."/>
 
                     </div>
 
-                    <div class="form-group col-sm-12 col-nd-4 col-lg-6">
+                    <div class="form-group col-sm-12 col-nd-4 col-lg-4">
 
-                        <label for="idCliente" class="control-label">Horas trabajadas</label>
-                        <input id="idCliente" type="text" class="form-control" placeholder="1, 2, 3, 4, etc."/>
+                        <label for="idCliente" class="control-label">País De Origen: </label>
+                        <input id="idCliente" type="text" class="form-control" placeholder="Bélgica."/>
+
+                    </div>
+
+                    <div class="form-group col-sm-12 col-nd-4 col-lg-4">
+
+                        <label for="idCliente" class="control-label">Producida: </label>
+                        <input id="idCliente" type="text" class="form-control" placeholder="1990 - Presente."/>
 
                     </div>
 
@@ -63,28 +75,43 @@
 
                     <div class="form-group col-sm-12 col-md-6 col-lg-4">
 
-                        <label for="idCliente" class="control-label">Empresa</label>
-                        <input id="idCliente" type="text" class="form-control" placeholder="Cinepolis"/>
+                        <label for="idCliente" class="control-label">Tipo: </label>
+                        <input id="idCliente" type="text" class="form-control" placeholder="Arma De Defensa Personal."/>
 
                     </div>
 
                     <div class="form-group col-sm-12 col-nd-6 col-lg-4">
 
-                        <label for="idCliente" class="control-label">Area</label>
-                        <input id="idCliente" type="text" class="form-control" placeholder="Proyeccion"/>
+                        <label for="idCliente" class="control-label">Precio: </label>
+                        <input id="idCliente" type="text" class="form-control" placeholder="$$$."/>
 
                     </div>
 
                     <div class="form-group col-sm-12 col-nd-12 col-lg-4">
 
-                        <label for="idCliente" class="control-label">Sucursal</label>
-                        <input id="idCliente" type="text" class="form-control" placeholder="Paseo Reforma"/>
+                        <label for="idCliente" class="control-label">Munición: </label>
+                        <input id="idCliente" type="text" class="form-control" placeholder="5.7 x 28."/>
 
                     </div>
                 </div>
 
-                <button id="Boton" type="button" class="btn btn-primary">Primary</button>
-                <button id="BotonAlerta" type="button" class="btn btn-secondary">Secondary</button>
+                <div>
+
+                    <button id="BotonVerde" type="button" class="btn btn-success">Producto Vendido.</button>
+                    <button id="BotonAzul" type="button" class="btn btn-primary">Producto Comprado.</button>
+                    <button id="BotonAmarillo" type="button" class="btn btn-warning">Guardar Producto.</button>
+
+                </div>
+                <div>
+
+                    <button id="btnajax"  type="button" class="btn btn-dark">English</button>
+                    <button id="btnreset" type="button" class="btn btn-dark">Español</button>
+                    
+                </div>
+                
+          
+              
+
                 <div id="Modal1" class="modal" tabindex="-1" role="dialog">
 
                     <div class="modal-dialog" role="document">
@@ -94,6 +121,7 @@
                         <div class="modal-header">
 
                           <h5 class="modal-title">Modal title</h5>
+
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 
                             <span aria-hidden="true">&times;</span>
@@ -144,7 +172,7 @@
 
         <script>
 
-            $("#Boton").click(function(){
+            $("#BotonAzul").click(function(){
                 $("#Modal1").modal()
             });
 
@@ -152,7 +180,7 @@
                 $("#BotonAle").close()
             });
 
-            $("#BotonAlerta").click(function(){
+            $("#BotonAmarillo").click(function(){
                 Swal.fire({
  
                     title: 'Do you want to save the changes?',
