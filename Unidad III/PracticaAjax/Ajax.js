@@ -4,31 +4,38 @@
         document.getElementById("btnajax").addEventListener("click",pedirHeader);
         document.getElementById("btnreset").addEventListener("click",iniciarHeader);
         
+
+
+        // Boton Promesa //
+
         function pedirHeader() {
         
-        var solicitud = new XMLHttpRequest();          //Crear objeto XMLHttpRequest
-        
-       
-        solicitud.onreadystatechange = function() {   // En esta propiedad declaramos la funcion a ejecutar
-                                                    // cuando cambie el status del objeto XMLHttpRequest
-        
-            if (solicitud.readyState == 4 && solicitud.status == 200) {                 // La respueta esta lista
-                document.getElementById("MyDiv").innerHTML = solicitud.responseText;  // La propiedad responseText tiene la respuesta en texto
-       
-            }};
-        
-        solicitud.open("GET", "Ajax.txt", true);
-       
-        solicitud.send();
-        
+            let promesa = new Promise(function(resolve,reject){
+                var solicitud = new XMLHttpRequest();
+                solicitud.onreadystatechange = function(){
+            
+                    if(solicitud.readyState == 4 && solicitud.status == 200){
+                        resolve(solicitud.responseText);
+                    }};
+                    solicitud.open("GET","Ajax.txt", true);
+                    solicitud.send();
+            
+                
+                    
+            });
+            
+            promesa.then(value => document.getElementById("enca").innerHTML = value);
          }
-        
         
          function iniciarHeader() {
             
             document.getElementById("MyDiv").innerHTML = "<h2>Tienda De Armas<h2>"; 
       
         }
+
+        // * * * * * //
+
+
         
         $(document).ready(function() {  
             $("#Boton").click(function(){
@@ -65,10 +72,7 @@
                 })
             });
 
-
-
             const btnSwitch = document.querySelector('#switch');
-
 
             btnSwitch.addEventListener('click', () => {
 	
@@ -80,12 +84,8 @@
 
             $("#Boton2").click(function(){
 
-
-                
-
             })
 
-           
             $('#BotonAzul').click(function(){
        
                 $.post('getRegistro.php',{},function(data){
@@ -111,11 +111,14 @@
 
        
                 },'json');
-    
   
             });
          
         });
     } 
+
+
+
+  
 
    
