@@ -1,39 +1,31 @@
 <?php
 
-$hostname = 'localhost';
-$database = 'apseguros';
-$username = 'root';
-$password = '';
+$id = 2;
 
-try {
-    $con = new PDO("mysql:host=$hostname;dbname=$database",$username,$password);
+$hostname = 'localhost';
+$database = 'n19100139';
+$username = 'root';
+$password = '9CC8FC611C93';
+
+try{
+    $con = new PDO("mysql:host=$hostname;dbname=$database",$username,$passwword);
 } catch(PDOException $e){
-    echo "Error de conexion a la base de datos";
     echo $e->getMessage();
     exit();
 }
-
-$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-
+//$con->setAttribute(PDO::ATT_ERRMODE,PDO::ERRMODE_EXCEPTION);
+try{
+   
+    $consultaSql = "Select idNumero,idNombre,idFabricante,idPais,idProducida,idTipo from GunsStore where idNumero=" .$id;
+    $consulta = $con -> prepare($consultaSql);
+    $consulta -> execute();
+    $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+    $consulta->closeCursor();
+}catch(PDOException $e){
+    echo "Error d la consulta";
+    echo $e->getMessage();
+}
+$resultadoJSON = json_encode($resultado);
+echo $resultadoJSON;
 ?>
 
-<?php include "conectar.php";
-
-try{
-    $query=$con->prepare("select * from cusuario");
-    $query->execute();
-
-    while ($row = $query->fetch()){
-        echo $row['idUsuario'].'-'. 
-        $row['nombre'].'-'. 
-        $row['apPaterno'].'-'. 
-        $row['apMaterno'].'<br>'. 
-
-        
-    }
-    $query->closeCursor();
-
-} catch(PDOException $e) {
-    echo "Error de consulta a la base de datos";
-    echo $e->getMessage
-}

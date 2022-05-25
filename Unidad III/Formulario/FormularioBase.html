@@ -177,4 +177,30 @@
   
     </body>
 
+    <script>
+        $('#BotonFetch').click(function(){
+            console.log("G'Day Mate!");
+            fetch('getRegistro.php')
+            .then(respuesta => respuesta.json())
+            .then(function(data){console.log(dato); refrescar(dato)});
+            console.log("ban");
+        });
+
+            function refrescar(data){
+                $('#idJuego').val(data.idJuego);
+                $('#idJuego').val(data.idJuego);
+                $('#idJuego').val(data.idJuego);
+                $('#idJuego').val(data.idJuego);
+                $('#idJuego').val(data.idJuego);
+                $('#idJuego').val(data.idJuego);
+                $('#idJuego').val(data.idJuego);
+                $('#idJuego').val(data.idJuego);
+            };
+            
+            
+
+
+        
+    </script>
+
 </html>
