@@ -24,7 +24,7 @@
                     
             });
             
-            promesa.then(value => document.getElementById("enca").innerHTML = value);
+            promesa.then(value => document.getElementById("LocalName").innerHTML = value);
          }
         
          function iniciarHeader() {
